@@ -1,1 +1,31 @@
+local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
 
+local player = game.Players.LocalPlayer
+
+local Window = Rayfield:CreateWindow({
+   Name = "Rayfield Example Window",
+   LoadingTitle = "welcome to Lost Script",
+   LoadingSubtitle = "by Lost",
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = nil, -- Create a custom folder for your hub/game
+      FileName = "Big Hub"
+   },
+   Discord = {
+      Enabled = true,
+      Invite = "https://discord.gg/JEKn3X72", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD.
+      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+   },
+   KeySystem = true,
+KeySettings = {
+   Title = "Lost Hub",
+   Subtitle = "Key System",
+   Note = "Join our clan discord for key - https://discord.gg/JEKn3X72",
+   FileName = "SiriusKey",
+   SaveKey = true,
+   GrabKeyFromSite = false,
+   Key = "MindBlowing"
+   }
+})
+
+local Tab = Window:CreateTab("Main")
